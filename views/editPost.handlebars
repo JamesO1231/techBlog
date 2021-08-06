@@ -1,0 +1,23 @@
+<section id='editPost'>
+    <h3>Edit Post</h3>
+    <div id='holder'>
+        <div class="row px-3 form-item"><label class="mb-1">
+                <h6 class="mb-0 text-sm" >Post ID</h6></label> 
+            <textarea rows="1" id='disabledText'> {{bp.id}} </textarea>
+        </div>
+        <div class="row px-3 form-item"><label class="mb-1">
+                <h6 class="mb-0 text-sm">Username</h6></label> 
+            <textarea class="form-control" id='usernameEntry' rows="1"> {{bp.user.username}} </textarea>
+        </div>
+        <div class="row px-3 form-item"><label class="mb-1">
+                <h6 class="mb-0 text-sm">Title</h6></label> 
+            <textarea class="form-control" id='titleEntry' rows="1"> {{bp.title}} </textarea>
+        </div>
+        <div class="row px-3 form-item"><label class="mb-1">
+                <h6 class="mb-0 text-sm">Content</h6></label>
+            <textarea class="form-control" id='contentEntry' rows="10"> {{bp.content}} </textarea>
+        </div>
+        <button type="button" class="btn btn-primary row mb-3 px-3" id='editPost'>Submit</button>
+    </div>
+</section>
+<script src="/public/js/editPost.js"></script>

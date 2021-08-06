@@ -1,9 +1,9 @@
 const updateBlogPost = async (event) => {
     event.preventDefault();
-    const id = document.querySelector('#disabled-text').value.trim();
-    const title = document.querySelector('#title-entry').value.trim();
-    const content = document.querySelector('#content-entry').value.trim();
-    const username = document.querySelector('#username-entry').value.trim();
+    const id = document.querySelector('#disabledText').value.trim();
+    const title = document.querySelector('#titleEntry').value.trim();
+    const content = document.querySelector('#contentEntry').value.trim();
+    const username = document.querySelector('#usernameEntry').value.trim();
 
     if (id && title && content && username) {
         const response = await fetch(`/api/user/${username}`)
