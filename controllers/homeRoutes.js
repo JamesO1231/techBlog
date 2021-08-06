@@ -3,12 +3,13 @@ const { User, BlogPost, Comment } = require('../models');
 
 router.get('/', async (req, res) => {
     try {
-        const blogData = await BlogPost.findall({
+        const blogData = await BlogPost.findAll({
             include: [{ model: User }],
         });
         const blog = blogData.map((post) => post.get({ plain: true }));
         res.render('home', { blog });
     }catch (e) {
+        console.log(e);
         res.status(500).json(e);
     }
 });
@@ -157,4 +158,4 @@ router.get('/comment/all/:id', async (req, res) => {
     }
 });
 
-module.export = router;
+module.exports = router;
