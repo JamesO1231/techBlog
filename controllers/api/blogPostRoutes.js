@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, BlogPost, Comment } = require('../../models');
+const { User, BlogPost } = require('../../models');
 
 router.post('/newPost', async (req, res) => {
     const postData = await User.findOne({ where: { username: req.body.username } });
