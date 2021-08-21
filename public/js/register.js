@@ -1,8 +1,9 @@
 const registrationHandler = async (event) => {
+    console.log(registrationHandler);
     event.preventDefault();
-    const username = document.querySelector('#usernameEnetry').value.trim();
-    const email = document.querySelector('#emailEnetry').value.trim();
-    const password = document.querySelector('#passwordEnetry').value.trim();
+    const username = document.querySelector('#usernameEntry').value.trim();
+    const email = document.querySelector('#emailEntry').value.trim();
+    const password = document.querySelector('#passwordEntry').value.trim();
     if (username && email && password) {
         const response = await fetch('/api/user/registerUser', {
             method: 'POST',

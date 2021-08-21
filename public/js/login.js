@@ -19,4 +19,9 @@ const loginHeader = async (event) => {
     };
 };
 
+const redirectSignup = () => {
+    document.location.replace('/register')
+}
+
 document.querySelector('#login').addEventListener('click', loginHeader);
+document.querySelector('#registerLink').addEventListener('click', redirectSignup);
